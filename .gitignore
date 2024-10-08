@@ -1,43 +1,65 @@
-# Miscellaneous
-*.class
-*.log
-*.pyc
-*.swp
-.DS_Store
-.atom/
-.buildlog/
-.history
-.svn/
-migrate_working_dir/
+# Flutter/Dart-specific ignores
 
-# IntelliJ related
-*.iml
-*.ipr
-*.iws
-.idea/
-
-# The .vscode folder contains launch configuration and tasks you configure in
-# VS Code which you may wish to be included in version control, so this line
-# is commented out by default.
-#.vscode/
-
-# Flutter/Dart/Pub related
-**/doc/api/
-**/ios/Flutter/.last_build_id
-.dart_tool/
+# Компилированный код и артефакты сборки
+build/
 .flutter-plugins
 .flutter-plugins-dependencies
-.pub-cache/
-.pub/
-/build/
+.packages
+.pubspec.lock
 
-# Symbolication related
-app.*.symbols
+# Генерируемые файлы
+**/GeneratedPluginRegistrant.java
+**/GeneratedPluginRegistrant.swift
 
-# Obfuscation related
-app.*.map.json
+# IntelliJ/VSCode проектные файлы (если используете эти IDE)
+.idea/
+.vscode/
 
-# Android Studio will place build artifacts here
-/android/app/debug
-/android/app/profile
-/android/app/release
+# Дартовые кеши и временные файлы
+.dart_tool/
+.flutter_tool/
+
+# iOS/Android артефакты
+ios/Flutter/Flutter.framework
+ios/Flutter/Flutter.podspec
+ios/Flutter/App.framework
+ios/.symlinks/
+ios/Pods/
+ios/Runner.xcworkspace/
+ios/Flutter/ephemeral/
+
+# Файлы CocoaPods
+ios/Podfile.lock
+ios/Podfile
+ios/Pods/
+ios/.dart_tool/
+
+# Android-specific files
+android/app/debug/
+android/app/profile/
+android/app/release/
+android/.gradle/
+android/.dart_tool/
+android/app/*.keystore
+
+# Mac-specific files
+*.DS_Store
+
+# Временные файлы ОС
+*.log
+*.tmp
+*.swp
+*.lock
+
+# Файлы тестирования
+coverage/
+
+# Linux и Windows специфические файлы (если поддерживаются)
+linux/flutter/ephemeral/
+windows/flutter/ephemeral/
+
+# Web специфические файлы
+web/.dart_tool/
+
+# Файлы Firebase (если используется)
+firebase_app_id_file.json
