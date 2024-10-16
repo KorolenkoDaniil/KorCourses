@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'CourseWindow/CourseWindow.dart';
-
+import 'package:kor_courses/Portrait/CourseWindow.dart';
 
 void main() => runApp(MyApp());
 
@@ -21,7 +20,7 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: CourseWindow()
+      body: Courses_window()
     );
   }
 }
