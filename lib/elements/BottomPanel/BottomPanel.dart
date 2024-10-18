@@ -1,24 +1,25 @@
 import "package:flutter/material.dart";
 import 'package:flutter_svg/flutter_svg.dart';
 
-class LeftPanel extends StatelessWidget {
+class BottomPanel extends StatelessWidget {
 
-  final double panelWidth;
+  final double panelHeight;
 
-  LeftPanel({Key? key, required this.panelWidth}) : super(key: key);
+  BottomPanel({Key? key, required this.panelHeight}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: panelWidth,
       decoration: const BoxDecoration(
         color: Color(0xFFF5F5F5),
-        border: Border(right: BorderSide(color: Colors.black45, width: 2)),
+        border: Border(top: BorderSide(color: Colors.black45, width: 1)),
       ),
-      padding: EdgeInsets.all(20),
-      child: Column(
+
+      height: panelHeight,
+
+      padding: EdgeInsets.only(bottom: 15),
+      child: Row(
         children: [
-          Text("KorCourses"),
           PanelElement("assets/images/courses.png", "My courses"),
           PanelElement("assets/images/training.png", "Training"),
           PanelElement("assets/images/profile.png", "My Profile"),
@@ -32,11 +33,11 @@ class LeftPanel extends StatelessWidget {
   Widget PanelElement(String path, String elementText) {
     return LayoutBuilder(
         builder: (BuildContext context, BoxConstraints constraints) {
-          return Row(
+          return Column(
             children: [
-              Image.asset(path, width: constraints.maxWidth * 0.1),
-              SizedBox(width: constraints.maxWidth * 0.05),
-              Text(elementText)
+              Image.asset(path, width: constraints.maxHeight),
+              SizedBox(width: constraints.maxHeight * 0.01),
+              // Text(elementText)
             ],
           );
         }

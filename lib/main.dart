@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:kor_courses/Portrait/CourseWindow.dart';
+import 'package:kor_courses/Portrait/CourseWindow_portrait.dart';
+import 'package:kor_courses/Landscape/CourseWindow_landscape.dart';
 
 void main() => runApp(MyApp());
 
@@ -19,8 +20,14 @@ class MyHomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    var orientation = MediaQuery.of(context).orientation;
+
     return Scaffold(
-      body: Courses_window()
+      body: orientation == Orientation.portrait
+          ? CoursesWindowPortrait()
+          : CoursesWindowLand(),
+
     );
   }
 }
